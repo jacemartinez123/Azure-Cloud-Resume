@@ -9,6 +9,7 @@
    a. General Styles
    b. Header Styles
    c. About Section
+   j. Skills Section
    d. Resume Section
    e. Portfolio Section
    f. Call To Action Section
@@ -228,6 +229,28 @@ ul#nav li.current a { color: #F06000; }
 #about .download .button i {
    margin-right: 15px;
    font-size: 20px;
+}
+/* ------------------------------------------------------------------ */
+/* c. Skills Section
+/* ------------------------------------------------------------------ */
+#skills {
+   
+   padding-top: 96px;
+   padding-bottom: 66px;
+   overflow: hidden;
+}
+
+#skills h1,
+#skills h2,
+#skills h3,
+#skills p,
+#skills li,
+#skills a {
+   color: #fff;
+}
+
+#skills a:hover {
+   color: #11ABB0;
 }
 
 

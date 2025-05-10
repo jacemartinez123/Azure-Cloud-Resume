@@ -801,7 +801,14 @@ properly.
 	margin-right: auto !important;
 	text-align: center !important;
 }
-
+.skills {
+   list-style: disc outside;
+   margin-left: 30px;
+}
+.skills li {
+   margin-bottom: 10px;
+   line-height: 24px;
+}
 
 
 
