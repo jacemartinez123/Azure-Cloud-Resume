@@ -14,7 +14,7 @@ const getVisitCount = () => {
         document.getElementById("counter").innerText = count;
     }).catch(function(error){
         console.log(error);
-    };
+    });
 
 
 }

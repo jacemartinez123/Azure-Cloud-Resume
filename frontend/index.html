@@ -55,8 +55,8 @@
       <div class="row banner">
          <div class="banner-text">
             <h1 class="responsive-headline">Hi, I'm Jace!</h1>
-            
-            <p>and this page has been viewed <a id="counter"></a> times :) </p> 
+            <p>This page has been viewed <span id="visitor-count">Loading...</span> times 🙂</p>
+
             <ul class="social">
                <li><a href="https://www.linkedin.com/in/jacemartinez123"><i class="fa fa-linkedin"></i></a></li>
                <li><a href="https://github.com/jacemartinez123"><i class="fa fa-github"></i></a></li>
@@ -378,7 +378,7 @@
 
    <!-- Java Script
    ================================================== -->
-   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
    <script>window.jQuery || document.write('<script src="js/jquery-1.10.2.min.js"><\/script>')</script>
    <script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js"></script>
 
@@ -387,6 +387,17 @@
    <script src="js/jquery.fittext.js"></script>
    <script src="js/magnific-popup.js"></script>
    <script src="js/init.js"></script>
+
+<script>
+  fetch("https://visitorcounterjace.azurewebsites.net/api/visitCounter")
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById("visitor-count").textContent = data.count;
+    })
+    .catch(error => {
+      console.error("Failed to fetch visitor count:", error);
+    });
+</script>
 
 </body>
 
