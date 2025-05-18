@@ -801,20 +801,47 @@ properly.
 	margin-right: auto !important;
 	text-align: center !important;
 }
-.skills {
-   list-style: disc outside;
-   margin-left: 30px;
+
+#skills {
+  background: #fff;
+  color: #313131;
+  padding-top: 90px;
+  padding-bottom: 72px;
+  overflow: hidden;
 }
-.skills li {
-   margin-bottom: 10px;
-   line-height: 24px;
+
+#skills h1 {
+  font: 18px/24px 'opensans-bold', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
-.highlight-white {
-  color: #ffffff;
-  font-weight: bold;
-  font-size: 1em;
-  text-shadow: 1px 1px 2px #000000;
+
+#skills h1 span {
+  border-bottom: 3px solid #11ABB0;
+  padding-bottom: 6px;
 }
+
+#skills h3 {
+  font: 25px/30px 'opensans-bold', sans-serif;
+  margin-bottom: 10px;
+}
+
+#skills ul.info {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+#skills ul.info li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  line-height: 26px;
+  font-size: 15px;
+}
+
+}
+
 
 
 
