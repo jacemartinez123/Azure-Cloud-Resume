@@ -3,20 +3,29 @@ __pycache__/
 *.pyc
 *.pyo
 *.pyd
-
-# Virtual environments
-.venv/
 env/
+.venv/
+.local/
+.python_packages/
 
-# Logs and system files
+# Azure Function artifacts
+.local.settings.json
 *.log
+
+# VS Code
+.vscode/
+
+# OS generated files
 .DS_Store
+Thumbs.db
 
-# Secrets
-.env
-
-# Node
+# Node/npm if used
 node_modules/
 
-# Azure
-local.settings.json
+# Build output
+dist/
+build/
+
+# Environment files
+.env
+.env.*

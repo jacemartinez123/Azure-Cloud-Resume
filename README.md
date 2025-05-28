@@ -60,6 +60,16 @@ This challenge was completed by building a cloud-based resume site hosted on Mic
 - Debugging, Logging & Permissions
 - End-to-end Cloud Deployment Workflow
 
+## 🧪 Testing
+
+This project includes unit tests for the Azure Function (visitor counter) using Python's `unittest` framework and `unittest.mock`.
+
+To run the tests:
+
+```bash
+cd visitor-api
+python -m unittest test_main.py
+
 ---
 
 ## 📚 Blog Post (Coming Soon)
