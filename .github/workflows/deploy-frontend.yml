@@ -31,10 +31,11 @@ jobs:
       with:
         creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-    - name: Purge Azure Front Door cache
+    - name: Purge Azure Front Door cache (AFD Standard)
       run: |
-        az network front-door purge-endpoint \
+        az afd endpoint purge \
           --resource-group azureresume \
-          --name HTTPS \
+          --profile-name HTTPS \
+          --name resume-jace-gzbwhagnbdc5cdfg \
           --content-paths '/*'
 
