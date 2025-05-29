@@ -36,6 +36,6 @@ jobs:
         az afd endpoint purge \
           --resource-group azureresume \
           --profile-name HTTPS \
-          --name resume-jace-gzbwhagnbdc5cdfg \
+          --endpoint-name resume-jace-gzbwhagnbdc5cdfg \
           --content-paths '/*'
 
