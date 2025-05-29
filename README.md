@@ -20,13 +20,28 @@ This challenge was completed by building a cloud-based resume site hosted on Mic
 | **Frontend**      | HTML, CSS, JavaScript                    |
 | **Hosting**       | Azure Storage Static Website             |
 | **Custom Domain** | [jamdomain.dev](https://www.jamdomain.dev) via Porkbun + Azure DNS |
-| **Security**      | HTTPS enforced via Azure CDN             |
+| **Security**      | HTTPS via Azure Front Door               |
 | **Backend**       | Azure Functions (Python)                 |
 | **Database**      | Azure Cosmos DB (Table API)              |
 | **API**           | Serverless Function with HTTP trigger    |
-| **Counter**       | Real-time visitor count via JavaScript fetch() |
-| **CI/CD**         | Coming Soon with GitHub Actions          |
+| **Counter**       | Real-time visitor count via JavaScript   |
+| **CI/CD**         | GitHub Actions for frontend & backend    |
+| **CDN Purge**     | Azure Front Door cache invalidation      |
 | **Blog**          | Coming Soon on Dev.to or Hashnode        |
+
+---
+
+## 🔄 CI/CD Pipelines
+
+### ✅ **Backend**
+- Python-based Azure Function deployed via GitHub Actions
+- Unit tests run using `unittest`
+- Automatically deployed to Azure on successful commit
+
+### ✅ **Frontend**
+- GitHub Actions detects changes in `frontend/` folder
+- Uploads to Azure Storage `$web` container with `--overwrite true`
+- Automatically purges Azure Front Door cache to reflect updates instantly
 
 ---
 
@@ -36,7 +51,8 @@ This challenge was completed by building a cloud-based resume site hosted on Mic
 2. **Visitor Counter API** is a Python Azure Function with an HTTP trigger, integrated with Cosmos DB.
 3. **Cosmos DB Logic** increments and returns the visitor count.
 4. **Frontend JS** fetches and displays the visitor count live on the site.
-5. **Security**: HTTPS via Azure CDN and Cosmos DB IP rules.
+5. **CI/CD** ensures every update is tested, deployed, and reflected instantly via CDN purge.
+6. **Security**: HTTPS via Azure Front Door + IP restrictions for database access.
 
 ---
 
