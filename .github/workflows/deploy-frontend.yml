@@ -25,3 +25,15 @@ jobs:
             --source ./frontend \
             --auth-mode key \
             --account-key ${{ secrets.AZURE_STORAGE_KEY }}
+            
+    - name: Login to Azure
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
+
+    - name: Purge Azure Front Door cache
+      run: |
+        az network front-door purge-endpoint \
+          --resource-group azureresume \
+          --name HTTPS \
+          --content-paths '/*'
