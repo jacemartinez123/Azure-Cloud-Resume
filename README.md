@@ -25,18 +25,18 @@ This challenge was completed by building a cloud-based resume site hosted on Mic
 | **Database**      | Azure Cosmos DB (Table API)              |
 | **API**           | Serverless Function with HTTP trigger    |
 | **Counter**       | Real-time visitor count via JavaScript fetch() |
-| **CI/CD (In Progress)** | GitHub Actions for frontend/backend deployments |
-| **Blog (Planned)**| Dev.to or Hashnode for project reflection and learnings |
+| **CI/CD**         | Coming Soon with GitHub Actions          |
+| **Blog**          | Coming Soon on Dev.to or Hashnode        |
 
 ---
 
 ## 🔨 How It Works
 
-1. **Static Resume** is written in pure HTML/CSS and hosted in an Azure Storage account with static website hosting enabled.
-2. **Visitor Counter API** is powered by a Python Azure Function with an HTTP trigger that connects to a Cosmos DB Table.
-3. **Database Logic** retrieves and increments a counter stored in Cosmos DB.
-4. **JavaScript Integration** fetches the current count and displays it live on the site.
-5. **Security**: HTTPS is enforced using Azure CDN + firewall rules on Cosmos DB for restricted access.
+1. **Static Resume** is written in HTML/CSS and hosted on Azure Storage with static website hosting.
+2. **Visitor Counter API** is a Python Azure Function with an HTTP trigger, integrated with Cosmos DB.
+3. **Cosmos DB Logic** increments and returns the visitor count.
+4. **Frontend JS** fetches and displays the visitor count live on the site.
+5. **Security**: HTTPS via Azure CDN and Cosmos DB IP rules.
 
 ---
 
@@ -48,42 +48,12 @@ This challenge was completed by building a cloud-based resume site hosted on Mic
 
 ---
 
-## 🏁 Skills Demonstrated
-
-- Azure Storage & Static Hosting
-- Azure Functions (v2 Python model)
-- Cosmos DB Table API
-- Environment Variable Configuration
-- Firewall + Networking in Azure
-- JavaScript + API Integration
-- Domain Management + DNS
-- Debugging, Logging & Permissions
-- End-to-end Cloud Deployment Workflow
-
 ## 🧪 Testing
 
-This project includes unit tests for the Azure Function (visitor counter) using Python's `unittest` framework and `unittest.mock`.
+This project includes unit tests for the Azure Function using Python's `unittest` and `unittest.mock`.
 
-To run the tests:
+To run tests locally:
 
 ```bash
 cd visitor-api
 python -m unittest test_main.py
-
----
-
-## 📚 Blog Post (Coming Soon)
-
-I'll be writing a blog post walking through my learning experience, challenges, and tips for anyone attempting this project.
-
----
-
-## 🙌 Acknowledgments
-
-Special thanks to [Forrest Brazeal](https://twitter.com/forrestbrazeal) for creating the original Cloud Resume Challenge, and to the Azure community for the documentation and support that helped along the way.
-
----
-
-## 📎 License
-
-This project is open source under the MIT License.
