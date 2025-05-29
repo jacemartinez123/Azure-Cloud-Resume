@@ -15,6 +15,13 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v3
 
+    - name: Show contents of frontend before upload
+      run: |
+        echo "📁 frontend directory structure:"
+        ls -R ./frontend
+        echo "📄 index.html preview:"
+        head -n 15 ./frontend/index.html || echo "index.html not found"
+
     - name: Upload to Azure Storage
       uses: azure/cli@v1
       with:
@@ -23,6 +30,7 @@ jobs:
             --account-name azurercloudesume \
             --destination '$web' \
             --source ./frontend \
+            --overwrite true \
             --auth-mode key \
             --account-key ${{ secrets.AZURE_STORAGE_KEY }}
 
