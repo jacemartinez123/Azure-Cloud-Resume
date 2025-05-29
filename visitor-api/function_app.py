@@ -34,3 +34,6 @@ def visit_counter(req: func.HttpRequest) -> func.HttpResponse:
     except Exception as e:
         logging.error(f"REAL ERROR: {e}")
         return func.HttpResponse(str(e), status_code=500)
+    
+    # Triggering CI/CD deployment via GitHub Actions
+
