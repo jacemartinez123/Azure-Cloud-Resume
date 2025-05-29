@@ -35,5 +35,6 @@ jobs:
       run: |
         az network front-door purge-endpoint \
           --resource-group azureresume \
-          --name resume-jace-gzbwhagnbdc5cdfg \
+          --name HTTPS \
           --content-paths '/*'
+
