@@ -20,7 +20,7 @@ jobs:
       with:
         inlineScript: |
           az storage blob upload-batch \
-            --account-name <STORAGE_ACCOUNT_NAME> \
+            --account-name azurercloudesume \
             --destination '$web' \
             --source ./frontend \
             --auth-mode key \
